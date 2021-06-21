@@ -7,7 +7,9 @@ fp = webdriver.FirefoxProfile()
 fp.set_preference("browser.helperApps.neverAsk.saveToDisk","text/csv")
 
 # use this to set the download folder:
-# fp.set_preference("browser.download.dir", "/home/directory/directory")
+# downloadPath = "home/fakefolder/fakefolder"
+# fp.set_preference("browser.download.folderList",2)
+# fp.set_preference("browser.download.dir", downloadPath)
 
 # creates a new webdriver using the firefox profile
 # must have geckodriver installed
