@@ -22,6 +22,7 @@ def findDownload():
         download = findDownload()
     return download
 
+# downloads airtable as csv, and saves to downloadPath
 def downloadAirtableCsv(link, downloadPath):
     # creates a new firefox profile
     fp = webdriver.FirefoxProfile()
