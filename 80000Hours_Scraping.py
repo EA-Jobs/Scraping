@@ -1,7 +1,17 @@
 from selenium import webdriver
 
-# must have the geckodriver downloaded
-driver = webdriver.Firefox()
+# sets up a new firefox profile
+fp = webdriver.FirefoxProfile()
+
+# sets the preferences in the profile such that it doesn't confirm download for csv files
+fp.set_preference("browser.helperApps.neverAsk.saveToDisk","text/csv")
+
+# use this to set the download folder:
+# fp.set_preference("browser.download.dir", "/home/directory/directory")
+
+# creates a new webdriver using the firefox profile
+# must have geckodriver installed
+driver = webdriver.Firefox(firefox_profile = fp)
 
 # opens the 80000 hours airtable
 driver.get('https://airtable.com/shrD9UEKusc6BYWWc/tbl5zkv6T7WSivZ89')
@@ -17,5 +27,3 @@ download = driver.find_element_by_xpath("//li[@class='py1 px1-and-half text-size
 
 # clicks on the download button
 download.click()
-
-# TODO: find way to confirm download, and move download to folder
