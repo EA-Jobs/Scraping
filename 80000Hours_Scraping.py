@@ -27,3 +27,5 @@ download = driver.find_element_by_xpath("//li[@class='py1 px1-and-half text-size
 
 # clicks on the download button
 download.click()
+
+# TODO: make generalizable to all airtables
