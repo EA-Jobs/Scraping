@@ -62,3 +62,4 @@ def downloadAirtableCsv(link, downloadPath):
 # downloadAirtableCsv("https://airtable.com/shrFYOsnjlMnTTvAa/tblbKsEIEUb1q9zQ0", "/home/d0themath/scraper")
 
 # TODO: figure out how to determine when the file is downloaded, then close window afterwards.
+# possible fix is to check when the file enters the downloadPath
