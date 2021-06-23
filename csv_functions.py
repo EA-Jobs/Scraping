@@ -17,9 +17,9 @@ def updates(oldCsvName, newCsvName):
     # looks through each job in the new list
     newJobs = list()
     for job in newList:
-        # if the job is unique to the new list
+        # if the job is unique to the new list...
         if job not in oldList:
-            # then it adds the job to the new jobs list
+            # ... then it adds the job to the new jobs list
             newJobs.append(job)
             
     return newJobs
